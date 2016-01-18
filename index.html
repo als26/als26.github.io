@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		
+		<title>Abilas Sathiyanesan</title>
+		
+		<link rel="stylesheet" type="text/css" href="Personal.css">
+		<link href='http://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css'>
+		
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("#linksbtn").click(function(){
+					$("#about").slideUp();
+					$("#contact").slideUp();
+					$("#links").slideDown();
+				});
+			});
+			
+			$(document).ready(function(){
+				$("#abtbtn").click(function(){
+					$("#links").slideUp();
+					$("#contact").slideUp();
+					$("#about").slideDown();
+				});
+			});
+			
+			$(document).ready(function(){
+				$("#cntctbtn").click(function(){
+					$("#links").slideUp();
+					$("#about").slideUp();
+					$("#contact").slideDown();
+				});
+			});
+		</script>
+		
+	</head>
+	
+	<body>
+		
+		<div id="nav">
+			<ul>
+				<li><button id="abtbtn">About Me</button></li>
+				<li><button id="linksbtn">Links</button></li>
+				<li><button id="cntctbtn">Contact Me</button></li>
+			</ul>
+		</div>
+		
+		<div id="about">
+			<h3 id="subtitle">About Me</h3>
+			<p id="content">Hello. My name is Abilas Sathiyanesan, 
+			I am an aspiring Front End Web and android Developer. I'm a 1st year 
+			student at the University of Waterloo and currently I am working at 
+			PointClickCare as a Java Developer and Quality Analyst.</p>
+		</div>
+		
+		<div id="links">
+			<h3 id="subtitle">Links</h3>
+			<ul>
+				<li><a href=https://drive.google.com/open?id=0B8qsA4dGzxs0Qzl4M3dORTNGZmM&authuser=0 target="blank">Resume</a></li> 
+				<li><a href=https://www.linkedin.com/in/abilassathiyanesan target="blank">LinkedIn</a></li>
+				<li><a href=https://github.com/als26 target="blank">GitHub</a></li>
+			</ul>
+		</div>
+		
+		<div id="contact">
+			<h3 id="subtitle">Contact Me</h3>
+				<form name="htmlform" method="post" action="html_form_send.php">
+				<table width="450px">
+				</tr>
+				<tr>
+					<td valign="top">
+						<label for="first_name">First Name *</label>
+					</td>
+					<td valign="top">
+						<input  type="text" name="first_name" maxlength="50" size="30">
+					</td>
+				</tr>
+ 
+				<tr>
+					<td valign="top"">
+						<label for="last_name">Last Name *</label>
+					</td>
+					<td valign="top">
+						<input  type="text" name="last_name" maxlength="50" size="30">
+					</td>
+				</tr>
+				<tr>
+					<td valign="top">
+						<label for="email">Email Address *</label>
+					</td>
+					<td valign="top">
+						<input  type="text" name="email" maxlength="80" size="30">
+					</td>
+ 
+				</tr>
+				<tr>
+					<td valign="top">
+						<label for="telephone">Telephone Number</label>
+					</td>
+					<td valign="top">
+						<input  type="text" name="telephone" maxlength="30" size="30">
+					</td>
+				</tr>	
+				<tr>	
+					<td valign="top">
+						<label for="comments">Comments *</label>
+					</td>
+					<td valign="top">
+						<textarea  name="comments" maxlength="1000" cols="25" rows="6"></textarea>
+					</td>
+ 
+				</tr>
+				<tr>
+					<td colspan="2" style="text-align:center">
+						<input type="submit" value="Submit">   ( <a href="http://www.freecontactform.com/html_form.php">HTML Form</a> )
+					</td>
+				</tr>
+			</table>
+			</form>
+		</div>
+		
+	</body>
+</html>
