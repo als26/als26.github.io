@@ -45,6 +45,7 @@ body {
 	content: "";
 	position: absolute;
 	background-color: #383736;
+    
 	right: 100%;
 	left: 0;
 	top: 0;
@@ -54,7 +55,7 @@ body {
 }
 				
 #nav ul li button:hover:before {
-	right:0;
+	right: 0;
 }
 			
 #about, #links, #contact {
