@@ -20,14 +20,14 @@ $( document ).ready(function() {
   $('#aboutBtn').click(function() {
     console.log("working");
     $('html,body').animate({
-        scrollTop: $("#aboutMe").offset().top},
+        scrollTop: $("#aboutMe").offset().top-150},
         'slow');
   });
   
   $('#linksBtn').click(function() {
     console.log("working");
     $('html,body').animate({
-        scrollTop: $("#links").offset().top},
+        scrollTop: $("#links").offset().top-150},
         'slow');
   });
 });
