@@ -2,7 +2,7 @@ $( document ).ready(function() {
   var elementPosition = $('#nav').offset();
   
   $(window).scroll(function(){
-    if($(window).scrollTop() > elementPosition.top){
+    if($(window).scrollTop() >= elementPosition.top){
       $('#nav').css('position','fixed').css('top','0');
       $("#back-top").fadeIn();
     } else {
