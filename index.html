@@ -5,7 +5,7 @@
         
     <!-- Bootstrap css -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href ="Personal.css" rel="stylesheet">
+    <link href ="css/custom.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300" rel="stylesheet">
   </head>
   
@@ -18,17 +18,27 @@
       
       <div id='nav-icons'>
       <!-- resume, github, linkedin, aboutMe, contact Me-->
-        <button class='btn-circle col-md-3'>Resume</button>
-        <button class='btn-circle col-md-3'>LinkedIn</button>
-        <button class='btn-circle col-md-3'>GitHub</button>
-        <button class='btn-circle col-md-3'>Contact me</button>
+        <button class='btn-circle col-md-3' id="resume">Resume</button>
+        <button class='btn-circle col-md-3' id="linkedin">LinkedIn</button>
+        <button class='btn-circle col-md-3' id="github">GitHub</button>
+        <button class='btn-circle col-md-3' id="contact">Contact me</button>
       </div>
     </div>
+    
+    <div id="back-top-div" style="display:none">
+      <button id="back-top" class="btn-circle" >About Me<br>^</button>
+    </div>
+    
+    <div id='aboutPage' style="display:none">
+      <div id='aboutMe'>
+        <p>Hi I am ABILAS!</p>
+      </div>
+    <div>
    <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Bootstrap js -->
     <script src="js/bootstrap.min.js"></script>
     <!--Custom JS-->
-    <script src="custom.js"></script>
+    <script src="js/custom.js"></script>
   </body>
 </html>
