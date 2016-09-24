@@ -65,6 +65,8 @@ body {
   color: #34495E;
 }
 
+button:focus { outline-style: none; }
+
 #back-top {
   position: fixed;
   bottom: 20px;
@@ -82,4 +84,60 @@ body {
   background-color:inherit;
   color: white;
   text-shadow: 1px 1px 2px white;
+}
+
+@media only screen 
+and (min-device-width: 319px) 
+and (max-device-width: 667px) 
+and (orientation: portrait) { 
+  .btn-circle {
+    width: 6em;
+    height: 6em;
+    font-size: 3.9em;
+  }
+  
+  #center-wrap {
+    top: 5%;
+  }
+}
+
+@media only screen 
+and (min-device-height: 319px) 
+and (max-device-height: 667px) 
+and (orientation: landscape) { 
+  #center-wrap {
+    top: 0%;
+  }
+  
+  #name h1 {
+  font-size: 4.9em;
+  }
+}
+
+@media only screen 
+and (min-device-width: 375px) 
+and (max-device-width: 736px) 
+and (orientation: portrait) { 
+  .btn-circle {
+    width: 7em;
+    height: 7em;
+    font-size: 4em;
+  }
+  
+  #center-wrap {
+    top: 5%;
+  }
+}
+
+@media only screen 
+and (min-device-height: 374px) 
+and (max-device-height: 736px) 
+and (orientation: landscape) { 
+  #center-wrap {
+    top: 0%;
+  }
+  
+  #name h1 {
+  font-size: 4.9em;
+  }
 }
