@@ -9,7 +9,7 @@ $( document ).ready(function() {
   });
   
   $('#resume').click(function(){
-    window.open('https://drive.google.com/open?id=0B8qsA4dGzxs0VTU5S0FISDNvUGc', '_blank');
+    window.open('https://drive.google.com/open?id=0B8qsA4dGzxs0RXU3NkJXZjZPMDA', '_blank');
   });
   
   $('#linkedin').click(function(){
