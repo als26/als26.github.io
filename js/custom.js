@@ -8,6 +8,7 @@ $( document ).ready(function() {
         'slow');
   });
   
+  //Clicking functionality for links
   $('#resume').click(function(){
     window.open('https://drive.google.com/open?id=0B8qsA4dGzxs0RXU3NkJXZjZPMDA', '_blank');
   });

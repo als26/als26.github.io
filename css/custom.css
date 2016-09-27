@@ -119,6 +119,7 @@ and (orientation: portrait) {
   #center-wrap {
     top: 5%;
   }
+  
 }
 
 /*iPhone 6 and Mid-size devices in portrait*/
@@ -169,6 +170,18 @@ and (orientation: landscape) {
   
   #center-wrap {
     top: 2%;
+  }
+}
+
+@media only screen 
+and (min-width : 640px) 
+and (max-width : 910px) 
+and (orientation: landscape) { 
+  #center-wrap {
+    top: 2%;
+  }
+  body {
+    overflow-y: auto;
   }
 }
 
