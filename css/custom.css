@@ -3,10 +3,10 @@ html {
 }
 
 body {
-  font-family: 'Roboto Condensed', sans-serif; 
+  font-family: 'Roboto Condensed', sans-serif;
   height: 100%;
   width: 100%;
-  background-color: #34495E; 
+  background-color: #34495E;
   background-size: cover;
   overflow-y: hidden;
 }
@@ -16,7 +16,7 @@ body {
   position: relative;
   top: 20%;
   text-align: center;
-  
+
 }
 
 #name {
@@ -47,8 +47,8 @@ body {
 .btn-circle {
   text-transform: uppercase;
   cursor: pointer;
-  width: 7.2em;
-  height: 7.2em;
+  width: 7.5em;
+  height: 7.5em;
   text-align: center;
   font-size: 2em;
   border:2px solid white;
@@ -86,54 +86,94 @@ button:focus { outline-style: none; }
   text-shadow: 1px 1px 2px white;
 }
 
+/*iPhone 6 and Mid-size devices in portrait*/
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 736px)
+and (orientation: portrait) {
+
+  #center-wrap {
+    top: 5%;
+  }
+
+  #name {
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 60%;
+    text-transform: uppercase;
+  }
+
+  #name h1 {
+    font-size: 8em;
+  }
+
+  #nav-icons {
+    width: 100%;
+  }
+
+  .btn-circle {
+    width: 92%;
+    height: 3.5em;
+    font-size: 5em;
+    border: 2px solid white;
+    line-height: 1.42;
+    border-radius: 30px;
+    background-color: inherit;
+    color: white;
+    margin: 55px auto 0px auto ;
+    transition: all 0.3s;
+    display: block;
+  }
+}
+
 /*Large screens*/
-@media only screen 
+/*@media only screen
 and (min-device-width: 1700px) {
-  
+
   #name h1 {
     font-size: 11em;
   }
-  
+
   .btn-circle {
     width: 7em;
     height: 7em;
     font-size: 4em;
-  } 
- 
+  }
+
   #center-wrap {
     top: 20%;
   }
-}  
+}*/
 
 /*iPad and Tablet screens*/
-@media only screen 
-and (min-device-width: 768px) 
-and (max-device-width: 1024px) 
-and (orientation: portrait) { 
+/*@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (orientation: portrait) {
   .btn-circle {
     width: 7em;
     height: 7em;
     font-size: 3.5em;
   }
-  
+
   #center-wrap {
     top: 5%;
   }
-  
-}
+
+}*/
 
 /*iPhone 6 and Mid-size devices in portrait*/
-@media only screen 
-and (min-device-width : 360px) 
-and (max-device-width : 736px) 
-and (orientation: portrait) { 
+/*@media only screen
+and (min-device-width : 360px)
+and (max-device-width : 736px)
+and (orientation: portrait) {
 
   .btn-circle {
     width: 7em;
     height: 7em;
     font-size: 3.5em;
   }
-  
+
   #name h1 {
     font-size: 4.5em;
   }
@@ -142,22 +182,22 @@ and (orientation: portrait) {
   body {
     overflow-y: auto;
   }
-  
+
   #center-wrap {
     top: 2%;
   }
-}
+}*/
 
 /*iPhone 6 and Mid-size devices in landscape*/
-@media only screen 
-and (min-device-width : 360px) 
-and (max-device-width : 736px) 
-and (orientation: landscape) { 
+/*@media only screen
+and (min-device-width : 360px)
+and (max-device-width : 736px)
+and (orientation: landscape) {
 
   #name h1 {
     font-size: 4em;
   }
-  
+
   .btn-circle {
     width: 7.4em;
     height: 7.4em;
@@ -167,16 +207,16 @@ and (orientation: landscape) {
   body {
     overflow-y: auto;
   }
-  
+
   #center-wrap {
     top: 2%;
   }
 }
 
-@media only screen 
-and (min-width : 640px) 
-and (max-width : 910px) 
-and (orientation: landscape) { 
+@media only screen
+and (min-width : 640px)
+and (max-width : 910px)
+and (orientation: landscape) {
   #center-wrap {
     top: 2%;
   }
@@ -185,3 +225,18 @@ and (orientation: landscape) {
   }
 }
 
+@media only screen
+and (min-width : 400px)
+and (max-width : 639px)
+and (orientation: landscape) {
+  #center-wrap {
+    top: 2%;
+  }
+  body {
+    overflow-y: auto;
+  }
+
+  #name h1 {
+    font-size: 5.5em;
+  }
+}*/
