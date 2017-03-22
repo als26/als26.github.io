@@ -86,7 +86,7 @@ button:focus { outline-style: none; }
   text-shadow: 1px 1px 2px white;
 }
 
-/*iPhone 6 and Mid-size devices in portrait*/
+/*Mobile devices in portrait*/
 @media only screen
 and (min-device-width : 320px)
 and (max-device-width : 736px)
@@ -160,83 +160,4 @@ and (orientation: portrait) {
     top: 5%;
   }
 
-}*/
-
-/*iPhone 6 and Mid-size devices in portrait*/
-/*@media only screen
-and (min-device-width : 360px)
-and (max-device-width : 736px)
-and (orientation: portrait) {
-
-  .btn-circle {
-    width: 7em;
-    height: 7em;
-    font-size: 3.5em;
-  }
-
-  #name h1 {
-    font-size: 4.5em;
-  }
-
-
-  body {
-    overflow-y: auto;
-  }
-
-  #center-wrap {
-    top: 2%;
-  }
-}*/
-
-/*iPhone 6 and Mid-size devices in landscape*/
-/*@media only screen
-and (min-device-width : 360px)
-and (max-device-width : 736px)
-and (orientation: landscape) {
-
-  #name h1 {
-    font-size: 4em;
-  }
-
-  .btn-circle {
-    width: 7.4em;
-    height: 7.4em;
-    font-size: 1.3em;
-  }
-
-  body {
-    overflow-y: auto;
-  }
-
-  #center-wrap {
-    top: 2%;
-  }
-}
-
-@media only screen
-and (min-width : 640px)
-and (max-width : 910px)
-and (orientation: landscape) {
-  #center-wrap {
-    top: 2%;
-  }
-  body {
-    overflow-y: auto;
-  }
-}
-
-@media only screen
-and (min-width : 400px)
-and (max-width : 639px)
-and (orientation: landscape) {
-  #center-wrap {
-    top: 2%;
-  }
-  body {
-    overflow-y: auto;
-  }
-
-  #name h1 {
-    font-size: 5.5em;
-  }
 }*/
