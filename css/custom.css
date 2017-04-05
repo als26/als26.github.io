@@ -167,11 +167,12 @@ and (orientation: portrait) {
 
   #nav-icons {
     width: 100%;
+    margin-top: 0px;
   }
 
   .btn-circle {
     width: 92%;
-    height: 2.7em;
+    height: 2.6em;
     font-size: 5em;
     border: 2px solid white;
     line-height: 1.42;
@@ -185,7 +186,7 @@ and (orientation: portrait) {
 
   #projectsBtn {
     width: 92%;
-    height: 2.7em;
+    height: 2.6em;
     font-size: 5em;
     border: 2px solid white;
     line-height: 1.42;
