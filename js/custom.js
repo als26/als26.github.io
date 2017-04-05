@@ -41,13 +41,16 @@ $( document ).ready(function() {
 
   function showDivs(n) {
     var i;
-    var x = document.getElementsByClassName("myProjects");
-    if (n > x.length) {projectIndex = 1}
-    if (n < 1) {projectIndex = x.length}
-    for (i = 0; i < x.length; i++) {
-       x[i].style.display = "none";
+    var x = $('.myProjects');
+    if (x.length) {
+      if (n > x.length) {projectIndex = 1}
+      if (n < 1) {projectIndex = x.length}
+      for (i = 0; i < x.length; i++) {
+         x[i].style.display = "none";
+      }
+      x[projectIndex-1].style.display = "block";
     }
-    x[projectIndex-1].style.display = "block";
+
   }
 
 });
