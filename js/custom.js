@@ -31,13 +31,6 @@ $( document ).ready(function() {
     console.log("right");
     showDivs(projectIndex += 1);
   });
-  // function leftScroll() {
-  //   showDivs(projectIndex -= 1);
-  // }
-
-  // function rightScroll() {
-  //   showDivs(projectIndex += 1);
-  // }
 
   function showDivs(n) {
     var i;

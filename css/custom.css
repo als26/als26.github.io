@@ -119,6 +119,30 @@ button:focus { outline-style: none; }
   height: 30%;
 }
 
+.text-wrapper {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text-wrapper .text {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  line-height: 30px;
+  bottom:186px;
+  left:0px;
+  visibility:hidden;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.text-wrapper:hover .text {
+  visibility:visible;
+  background-color:rgba(0,0,0,0.8);
+}
+
 .nav-button {
   background: none;
   border: none;
@@ -128,7 +152,7 @@ button:focus { outline-style: none; }
 }
 
 .imageDisplay {
-  width: 80%;
+  width: 100%;
 }
 
 .display-left {
@@ -143,10 +167,12 @@ button:focus { outline-style: none; }
   right: -3%;
 }
 
+
+/*13 inch Laptops*/
 @media only screen
 and (min-device-width : 1024px)
 and (max-device-width : 1280px) {
-  .imageDisplay {
+  .text-wrapper {
     width: 75%;
   }
 }
@@ -163,6 +189,10 @@ and (orientation: portrait) {
 
   #title h1 {
     font-size: 8em;
+  }
+
+  .projectsMobile {
+    margin-top: 18%;
   }
 
   #nav-icons {
@@ -198,40 +228,40 @@ and (orientation: portrait) {
     display: block;
     padding-top: 0.6em;
   }
+
+  #sliper-wrap{
+    width: 92%;
+    top: 5%;
+  }
+
+  .text-wrapper {
+    width: 100%;
+  }
+
+  #corner {
+    font-size: 2.5em;
+  }
+}
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 737px)
+and (orientation: landscape) {
+
+  #center-wrap {
+    top: 3%;
+  }
+
+  #title h1 {
+    font-size: 5em;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+
+
 }
 
 /*Large screens*/
 /*@media only screen
 and (min-device-width: 1700px) {
-
-  #title h1 {
-    font-size: 11em;
-  }
-
-  .btn-circle {
-    width: 7em;
-    height: 7em;
-    font-size: 4em;
-  }
-
-  #center-wrap {
-    top: 20%;
-  }
-}*/
-
-/*iPad and Tablet screens*/
-/*@media only screen
-and (min-device-width: 768px)
-and (max-device-width: 1024px)
-and (orientation: portrait) {
-  .btn-circle {
-    width: 7em;
-    height: 7em;
-    font-size: 3.5em;
-  }
-
-  #center-wrap {
-    top: 5%;
-  }
-
 }*/

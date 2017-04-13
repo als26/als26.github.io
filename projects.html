@@ -24,22 +24,42 @@
     <a id="corner" class='btn-circle2' href="./"><span class='fa fa-home'>
     </span> Home</a>
     <div id='title'>
-      <h1>Projects</h1>
+      <h1 class="projectsMobile">Projects</h1>
     </div>
 
     <div id='slider-wrap'>
       <div id='projects'>
+
         <div class='myProjects'>
           <h4>Open! (Facial Recognition Security unlock)</h4>
-          <img src="images/openVerified.png" class="imageDisplay">
+          <div class="text-wrapper">
+            <img src="images/openVerified.png" class="imageDisplay">
+            <p class="text">Open! is a security lock based on facial recognition. The facial
+            detection and recognition algorithm is done using the openCV library with C++. There was
+        also a heavy amount of custom algorithms put in place for motion detection and blur
+         reduction. Our implementation also <a href="images/openUnverified.png">included text alerts with pictures</a> if the face detection
+         algorithm detected an unverified guest. We used node.js and the Twilio API service for this.
+      </p>
+          </div>
         </div>
+
         <div class='myProjects'>
           <h4>Muse-IT! (Hands free computer shortcuts)</h4>
-          <video class="imageDisplay" controls>
-            <source src="images/museDemo.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-          </video>
+          <div class="text-wrapper">
+            <video class="imageDisplay" controls>
+              <source src="images/museDemo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </video>
+            <p class="text">Muse-IT uses the Muse headband to be able to perform shortcuts on Windows OS.
+            The muse headband is able to read brain signals using various sensors, and then output the data
+          in a parsable format. We took this data and were able to single out key actions such as blinking and
+        jaw clenching. Our goal was to be able to use these events to be able to perform hands free events. In the
+          demo, the user doubles blinks to perform a random calculation. We were also able to play/pause music and launch
+          apps.
+        </p>
+          </div>
         </div>
+
       </div>
 
       <button class='nav-button display-left'><i class="fa fa-angle-left" aria-hidden="true"></i></button>
