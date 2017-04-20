@@ -23,12 +23,10 @@ $( document ).ready(function() {
   });
 
   $('.display-left').on('click', function() {
-    console.log("left");
     showDivs(projectIndex -= 1);
   });
 
   $('.display-right').on('click', function() {
-    console.log("right");
     showDivs(projectIndex += 1);
   });
 

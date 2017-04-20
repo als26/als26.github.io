@@ -105,6 +105,7 @@ button:focus { outline-style: none; }
   top: 2%;
   text-align: center;
   width: 80%;
+  height: 80%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -133,14 +134,31 @@ button:focus { outline-style: none; }
   line-height: 30px;
   bottom:186px;
   left:0px;
-  visibility:hidden;
+
   font-size: 18px;
   font-weight: 300;
+
+  color: rgba(0,0,0,0.0);
+  background-color:rgba(0,0,0,0.0);
+  box-shadow: 0 0 0 0;
+  border-radius: 2px;
+
+  transition: all 0.2s ease-in;
+}
+
+.text-wrapper .text a {
+  color: rgba(0,0,0,0.0);
+  transition: all 0.2s ease-in;
 }
 
 .text-wrapper:hover .text {
-  visibility:visible;
+  color: rgba(255,255,255,1);
   background-color:rgba(0,0,0,0.8);
+  box-shadow: black 0 0 10px -1px;
+}
+
+.text-wrapper:hover .text a {
+  color: rgba(255,255,255,1);
 }
 
 .nav-button {
@@ -157,14 +175,22 @@ button:focus { outline-style: none; }
 
 .display-left {
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: -3%;
+  text-shadow: rgba(255, 255, 255, 0) 0 0 10px;
+  transition: all 0.2s;
 }
 
 .display-right {
   position: absolute;
-  top: 50%;
+  top: 30%;
   right: -3%;
+  text-shadow: rgba(255, 255, 255, 0) 0 0 10px;
+  transition: all 0.2s;
+}
+
+.display-left:hover, .display-right:hover {
+  text-shadow: white 0 0 10px;
 }
 
 
@@ -183,6 +209,10 @@ and (min-device-width : 320px)
 and (max-device-width : 736px)
 and (orientation: portrait) {
 
+  body {
+    overflow-y: scroll;
+  }
+  
   #center-wrap {
     top: 2%;
   }
@@ -229,8 +259,9 @@ and (orientation: portrait) {
     padding-top: 0.6em;
   }
 
-  #sliper-wrap{
+  #slider-wrap {
     width: 92%;
+    height: 40%;
     top: 5%;
   }
 
@@ -243,9 +274,10 @@ and (orientation: portrait) {
   }
 }
 
+/*Mobile devices in landscape*/
 @media only screen
 and (min-device-width : 320px)
-and (max-device-width : 737px)
+and (max-device-width : 736px)
 and (orientation: landscape) {
 
   #center-wrap {
@@ -257,9 +289,31 @@ and (orientation: landscape) {
     margin-top: 10px;
     margin-bottom: 5px;
   }
+}
 
+/*iPad & tablets in portrait*/
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation: portrait) {
+
+  #slider-wrap {
+    width: 92%;
+    height: 50%;
+    top: 5%;
+  }
+
+  .text-wrapper {
+    width: 100%;
+  }
+
+  #corner {
+    font-size: 2.5em;
+  }
 
 }
+
+
 
 /*Large screens*/
 /*@media only screen
