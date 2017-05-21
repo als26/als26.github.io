@@ -7,7 +7,7 @@ $( document ).ready(function() {
 
   //Clicking functionality for links
   $('#resume').click(function(){
-    window.open('https://drive.google.com/open?id=0B8qsA4dGzxs0RXU3NkJXZjZPMDA', '_blank');
+    window.open('https://drive.google.com/open?id=0B8qsA4dGzxs0TDE5Q0pnaTJxeHc', '_blank');
   });
 
   $('#linkedin').click(function(){
@@ -31,7 +31,7 @@ $( document ).ready(function() {
   });
 
   $('.git-link').on('click', function(){
-    window.open($(this).data('link'), '_blank'); 
+    window.open($(this).data('link'), '_blank');
   });
   function showDivs(n) {
     var i;
