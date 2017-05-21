@@ -120,6 +120,15 @@ button:focus { outline-style: none; }
   height: 30%;
 }
 
+.git-link {
+  text-shadow: white 0px 0px 1px;
+}
+
+.git-link:hover {
+    cursor:pointer;
+    text-shadow: white 0px 0px 2px;
+}
+
 .text-wrapper {
   width: 80%;
   margin-left: auto;
@@ -212,7 +221,7 @@ and (orientation: portrait) {
   body {
     overflow-y: scroll;
   }
-  
+
   #center-wrap {
     top: 2%;
   }

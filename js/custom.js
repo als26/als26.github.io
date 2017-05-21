@@ -30,6 +30,9 @@ $( document ).ready(function() {
     showDivs(projectIndex += 1);
   });
 
+  $('.git-link').on('click', function(){
+    window.open($(this).data('link'), '_blank'); 
+  });
   function showDivs(n) {
     var i;
     var x = $('.myProjects');
