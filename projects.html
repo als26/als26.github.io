@@ -40,7 +40,7 @@
         also a heavy amount of custom algorithms put in place for motion detection and blur
          reduction. Our implementation also <a href="images/openUnverified.png" target="_blank">included text alerts with pictures</a> if the face detection
          algorithm detected an unverified guest. We used node.js and the Twilio API service for this.
-      </p>
+            </p>
           </div>
         </div>
 
@@ -58,7 +58,23 @@
         jaw clenching. Our goal was to be able to use these events to be able to perform hands free events. In the
           demo, the user doubles blinks to perform a random calculation. We were also able to play/pause music and launch
           apps.
-        </p>
+            </p>
+          </div>
+        </div>
+
+        <div class='myProjects'>
+          <h4> <a href="https://github.com/als26"> Kirsch Image Edge Detector   <span class="git-link fa fa-github"
+            title="Github Link"></span></a></h4>
+          <div class="text-wrapper">
+            <img src="images/edgeDetection.png" class="imageDisplay">
+            <p class="text">Using Kirsch's algorithm, we implemented an edge detection program for black & white images.
+              The algorithm uses a 3*3 matrix of pixels. The pixel currently being examined will be in the centre of the
+                matrix, while each pixel beside it (top, bottom, left, right and corners) will fill the rest of the matrix.
+                From there a calculation will be made between the pixel in focus and it's neighbours to see how radically
+                different the brightness values are (blacks are less bright, whites are more bright). If the difference meets
+                a certain threshhold, an edge is detected and is marked. Edge Detection is used in the industry often times to
+                seperate the subject from the background, which can be further used for effects such as bokeh.
+            </p>
           </div>
         </div>
 
