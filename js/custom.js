@@ -7,7 +7,7 @@ $( document ).ready(function() {
 
   //Clicking functionality for links
   $('#resume').click(function(){
-    window.open('https://drive.google.com/open?id=0B8qsA4dGzxs0TDE5Q0pnaTJxeHc', '_blank');
+    window.open('https://drive.google.com/open?id=1MUTxv1Ynz-T7jAjy3N-5iuowbCkkJiL4', '_blank');
   });
 
   $('#linkedin').click(function(){
