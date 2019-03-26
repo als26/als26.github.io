@@ -12,6 +12,10 @@ body {
   overflow-y: hidden;
 }
 
+#projects {
+  /* overflow-y: scroll; */
+}
+
 #center-wrap {
   position: relative;
   top: 10%;
@@ -25,12 +29,35 @@ body {
   min-width: 60%;
 }
 
+#profile {
+  /* font-size: 0.5em;
+  width: 1.8em;
+  height: 1.8em; */
+  border-width: 2px;
+  border-color: whitesmoke;
+  border-radius: 50%;
+  width: 1.2em;
+  height: 1.2em;
+  vertical-align: bottom;
+}
+
 #title h1 {
   font-size: 6.5em;
   font-weight: 100;
   text-align: center;
   text-transform: uppercase;
   color: whitesmoke;
+}
+
+#title h4 {
+  font-size: 1.5em;
+  font-weight: 30;
+  text-align: center;
+  color: whitesmoke;
+}
+
+#picture {
+
 }
 
 #nav-icons {
@@ -89,6 +116,40 @@ button:focus { outline-style: none; }
 
 
 /*Projects page*/
+.imageSlides {
+  height: 100%;
+  width: 500px;
+  opacity: 0.5;
+  padding: 25px;
+}
+
+.imageSlides:hover {
+  position: relative;
+  opacity: 1;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.projectTitles {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Create three equal columns that sits next to each other */
+.column {
+  position: relative;
+}
+
 #corner {
   position: absolute;
   top: 2%;
