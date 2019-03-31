@@ -13,32 +13,27 @@ body {
 }
 
 #projects {
-  /* overflow-y: scroll; */
+  overflow-y: scroll;
 }
 
+/*Keep content aligned vetically/horizontally */
 #center-wrap {
   position: relative;
   top: 10%;
   text-align: center;
 }
 
+/* profile picture */
+#profile {
+  border-radius: 50%;
+  width: 10.2em;
+  height: 10.2em;
+}
 
 #title {
   margin-left: auto;
   margin-right: auto;
   min-width: 60%;
-}
-
-#profile {
-  /* font-size: 0.5em;
-  width: 1.8em;
-  height: 1.8em; */
-  border-width: 2px;
-  border-color: whitesmoke;
-  border-radius: 50%;
-  width: 1.2em;
-  height: 1.2em;
-  vertical-align: bottom;
 }
 
 #title h1 {
@@ -49,15 +44,9 @@ body {
   color: whitesmoke;
 }
 
-#title h4 {
-  font-size: 1.5em;
-  font-weight: 30;
-  text-align: center;
-  color: whitesmoke;
-}
-
-#picture {
-
+#tagline h4{
+  font-family: inherit;
+  font-weight: 300;
 }
 
 #nav-icons {
@@ -71,10 +60,10 @@ body {
 
 .btn-circle {
   cursor: pointer;
-  width: 7.5em;
-  height: 7.5em;
+  width: 2.7em;
+  height: 2.7em;
   text-align: center;
-  font-size: 2em;
+  font-size: 1.6em;
   font-weight: 100;
   color: white;
   border:2px solid white;
@@ -90,8 +79,8 @@ body {
   color: #34495E;
 }
 
-.btn-circle2 {
-  width: 18em;
+.link-button {
+  width: 19em;
   height: 2em;
   font-size: 2.1em;
   border: 2px solid white;
@@ -99,14 +88,14 @@ body {
   border-radius: 30px;
   background-color: inherit;
   color: white;
-  margin: 40px auto 0px auto;
+  margin: 20px auto 0px auto;
   transition: all 0.3s;
   display: block;
   font-weight: 100;
   padding-top: 0.2em;
 }
 
-.btn-circle2:hover {
+.link-button:hover {
   background-color: white;
   color: #34495E;
   text-decoration: none;
@@ -116,30 +105,49 @@ button:focus { outline-style: none; }
 
 
 /*Projects page*/
-.imageSlides {
+.image-slides {
   height: 100%;
   width: 500px;
-  opacity: 0.5;
+  opacity: 0.8;
   padding: 25px;
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
+  transition: 0.5s;
 }
 
-.imageSlides:hover {
-  position: relative;
-  opacity: 1;
+.image-slides2 {
+  display: none;
+}
+
+.column:hover .image-slides {
+  filter: blur(1px);
+  -webkit-filter: blur(1px);
   cursor: pointer;
-  z-index: 2;
 }
 
-.projectTitles {
+.project-titles {
+  display: unset;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  z-index: 1;
+  transition: 0.4s;
 }
 
-.row {
+.project-titles h4 {
+  font-size: 1.4em;
+}
+
+.hidden-git-link {
+  display: none;
+}
+
+.project-description {
+  display: none;
+}
+
+.projectsPage {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -150,7 +158,7 @@ button:focus { outline-style: none; }
   position: relative;
 }
 
-#corner {
+#homeButton {
   position: absolute;
   top: 2%;
   left: 1%;
@@ -171,7 +179,7 @@ button:focus { outline-style: none; }
   margin-right: auto;
 }
 
-#projects {
+#projectsWrap {
   width:100%
 }
 
@@ -181,13 +189,103 @@ button:focus { outline-style: none; }
   height: 30%;
 }
 
+/* The Modal (background) */
+
+.modal::before {
+  content: "";
+  display: block;
+  background-color:blue;
+  position: fixed;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+   -webkit-filter: blur(5px);
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  /* background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.7);  */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #34495E;
+  margin: 8% auto 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  width: 80%; /* Could be more or less, depending on screen size */
+  height: 65%;
+}
+
 .git-link {
+  display: none;
   text-shadow: white 0px 0px 1px;
 }
 
 .git-link:hover {
     cursor:pointer;
     text-shadow: white 0px 0px 2px;
+}
+
+#bigProjectTitle {
+  font-family: inherit;
+  font-weight: 100;
+  margin-top: 0px;
+}
+
+#bigProjectTitle .git-link {
+  margin-top: 10px;
+}
+
+#bigProjectTitle .git-link h4 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  margin-bottom: 0px;
+}
+
+#bigProjectImage {
+  width: 48%;
+  margin: 15px 0px;
+  float: left;
+}
+
+#bigProjectImage2 {
+  width: 48%;
+  margin: 15px 0px;
+  float: right;
+}
+
+#bigProjectDesc {
+  font-size: 1.3em;
+  font-weight: 100;
+  font-family: sans-serif;
+  float: right;
+}
+
+/* The Close Button */
+.close {
+  color: whitesmoke;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  opacity: 1;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .text-wrapper {
@@ -243,6 +341,10 @@ button:focus { outline-style: none; }
   width: 100%;
 }
 
+.display-hidden {
+  visibility: hidden;
+}
+
 .display-left {
   position: absolute;
   top: 30%;
@@ -264,15 +366,6 @@ button:focus { outline-style: none; }
 }
 
 
-/*13 inch Laptops*/
-@media only screen
-and (min-device-width : 1024px)
-and (max-device-width : 1280px) {
-  .text-wrapper {
-    width: 75%;
-  }
-}
-
 /*Mobile devices in portrait*/
 @media only screen
 and (min-device-width : 320px)
@@ -284,63 +377,108 @@ and (orientation: portrait) {
   }
 
   #center-wrap {
-    top: 2%;
+    top: 8%;
   }
 
+  #profile {
+    width: 13.2em;
+    height: 13.2em;
+  }
   #title h1 {
     font-size: 8em;
   }
 
+  #tagline {
+    margin-top: 30px;
+  }
+
+  #tagline h4 {
+    font-size: 2.8em;
+    line-height: 55px;
+  }
+
+  .btn-circle {
+    width: 3em;
+    height: 3em;
+    font-size: 3.7em;
+    margin: 0px 22px 10px 22px;
+  }
+
+  .link-button {
+    line-height: 2.15;
+    height: 2.5em;
+    font-size: 3.4em;
+    font-weight: 300;
+    margin-top: 50px;
+  }
   .projectsMobile {
     margin-top: 18%;
   }
 
   #nav-icons {
     width: 100%;
-    margin-top: 0px;
+    margin-top: 50px;
   }
 
-  .btn-circle {
-    width: 92%;
-    height: 2.6em;
-    font-size: 5em;
-    border: 2px solid white;
-    line-height: 1.42;
-    border-radius: 30px;
-    background-color: inherit;
-    color: white;
-    margin: 55px auto 0px auto ;
-    transition: all 0.3s;
-    display: block;
-  }
-
-  #projectsBtn {
-    width: 92%;
-    height: 2.6em;
-    font-size: 5em;
-    border: 2px solid white;
-    line-height: 1.42;
-    border-radius: 30px;
-    background-color: inherit;
-    color: white;
-    margin: 55px auto 0px auto ;
-    transition: all 0.3s;
-    display: block;
-    padding-top: 0.6em;
+  /* projects page */
+  #homeButton {
+    font-size: 2.5em;
   }
 
   #slider-wrap {
-    width: 92%;
+    width: 100%;
     height: 40%;
-    top: 5%;
+    top: 1%;
   }
+
+  .project-titles h4 {
+    font-size: 3.2em;
+  }
+
+  .image-slides {
+    width: 80%;
+  }
+
+  .modal-content {
+    width: 90%;
+    height: 90%
+  }
+
+  .close {
+    font-size: 3em;
+  }
+  #bigProjectTitle {
+    font-size: 3.7em;
+    margin: 30px 10px 20px 10px;
+  }
+
+  #bigProjectTitle .git-link {
+    font-size: 1.7em;
+    margin-top: 25px;
+  }
+
+  #bigProjectImage {
+    width: 95%;
+    margin: 15px auto;
+    float: none;
+  }
+
+  #bigProjectImage2 {
+    width: 95%;
+    margin: 15px auto;
+    float: none;
+  }
+
+  #bigProjectDesc {
+    font-size: 2.3em;
+    margin: 40px 10px;
+    line-height: 1.5;
+  }
+
+
 
   .text-wrapper {
     width: 100%;
-  }
-
-  #corner {
-    font-size: 2.5em;
   }
 }
 

@@ -21,74 +21,79 @@
   </head>
 
   <body id = "projects">
-    <!-- <a id="corner" class='btn-circle2' href="./"><span class='fa fa-home'>
+    <a id="homeButton" class='link-button' href="./"><span class='fa fa-home'>
     </span> Home</a>
+
     <div id='title'>
       <h1 class="projectsMobile">Projects</h1>
     </div>
 
-    <div class='row'>
-      <div class='column'><img class="imageSlides" src="images/openVerified.png"> <span class=projectTitles><h4>Open! Facial Recognition</h4></span></div>
-      <div class='column'><img class="imageSlides" src="images/edgeDetection.png"> <span class=projectTitles><h4>Kirsh Image Edge Detection Circuit</h4></span></div>
-      <div class='column'><img class="imageSlides" src="images/guideMeGlove.jpg"> <span class=projectTitles><h4>Guide-Me Glove</h4></span></div>
-      <div class='column'><img class="imageSlides" src="images/museIt.png"> <span class=projectTitles><h4>Muse-It: Hands Free Shortcuts</h4></span></div>
-    </div> -->
     <div id='slider-wrap'>
-      <div id='projects'>
+      <div id='projectsWrap'>
 
-        <div class='myProjects'>
-          <h4>Open! (Facial Recognition Security unlock)   <span class="git-link fa fa-github " data-link="https://github.com/als26/Open"
-            title="Github Link"></span></h4>
-          <div class="text-wrapper">
-            <img src="images/openVerified.png" class="imageDisplay">
-            <p class="text">Open! is a security lock based on facial recognition. The facial
-            detection and recognition algorithm is done using the openCV library with C++. There was
-        also a heavy amount of custom algorithms put in place for motion detection and blur
-         reduction. Our implementation also <a href="images/openUnverified.png" target="_blank">included text alerts with pictures</a> if the face detection
-         algorithm detected an unverified guest. We used node.js and the Twilio API service for this.
-            </p>
+        <div class='projectsPage'>
+          <div class='column'><img class="image-slides" src="images/openVerified.png"> <img class="image-slides2" src="images/openUnverified.png"> <span class=project-titles>
+            <h4>Open! Facial Recognition</h4> <span class="hidden-git-link" data-link="https://github.com/als26/Open"></span></span>
+            <span class=project-description>
+              <h4>Open! is verfication system based on facial recognition. It uses OpenCV for image processing and the Kairos API for image recognition.
+              A custom blur detection and reduction algorithm was also implemented to increase facial recognition. Unrecognized visitors would have their
+              picture sent to the owner using the Twilio Text API.</h4>
+            </span>
+          </div>
+
+          <div class='column'><img class="image-slides" src="images/edgeDetection.png"> <span class=project-titles>
+            <h4>Kirsh Image Edge Detection Circuit</h4> <span class="hidden-git-link" data-link="https://github.com/als26/Kirsch-Image-Edge-Detector"></span></span>
+            <span class=project-description>
+              <h4>Using Kirsch's algorithm, we implemented an edge detection program for black & white images. The algorithm uses a 3*3 matrix of pixels.
+                The pixel currently being examined will be in the centre of the matrix, while each pixel beside it (top, bottom, left, right and corners) will
+                fill the rest of the matrix. From there a calculation will be made between the pixel in focus and it's neighbours to see how radically different
+                the brightness values are (blacks are less bright, whites are more bright). If the difference meets a certain threshhold, an edge is detected and is marked.
+                Edge Detection is used in the industry often times to seperate the subject from the background, which can be further used for effects such as bokeh.</h4>
+            </span>
+
+          </div>
+          <div class='column'><img class="image-slides" src="images/guideMeGlove.jpg"> <img class="image-slides2" src="images/guideMeGloveApp.png"> <span class=project-titles>
+            <h4>Guide-Me Glove</h4> <span class="hidden-git-link" data-link="https://github.com/rashmi237/GuideMe-Glove"></span> </span>
+            <span class=project-description>
+              <h4>The Guide-Me Glove was built using an arduino, vibration motors and ultrasonic sensors to help guide the visually impaired around obstacles.
+                The ultrasonic sensors read distances to nearby objects. The corresponding vibration motors provide haptic feedback to the user to warn them when an
+                object is nearby. A companion mobile app was built to allow for custom configuration and checking battery status. </h4>
+            </span>
+          </div>
+
+          <div class='column'><img class="image-slides" src="images/museIt.png"> <span class=project-titles>
+            <h4>Muse-It: Hands Free Shortcuts</h4> <span class="hidden-git-link" data-link="https://github.com/rashmi237/Muse-IT"></span></span>
+            <span class=project-description>
+              <h4>Muse-IT uses the Muse headband to be able to perform shortcuts on Windows OS. The muse headband is able to read brain signals using various sensors,
+              and then output the data in a parsable format. We took this data and were able to single out key actions such as blinking and jaw clenching. We were able to
+              trigger hands free shortcuts on the Windows OS such as playing music using these actions </h4>
+            </span>
           </div>
         </div>
 
-        <div class='myProjects'>
-          <h4>Muse-IT! (Hands free computer shortcuts)   <span class="git-link fa fa-github" data-link="https://github.com/rashmi237/Muse-IT"
-            title="Github Link"></span></h4>
-          <div class="text-wrapper">
-            <video class="imageDisplay" controls>
-              <source src="images/museDemo.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-            </video>
-            <p class="text">Muse-IT uses the Muse headband to be able to perform shortcuts on Windows OS.
-            The muse headband is able to read brain signals using various sensors, and then output the data
-          in a parsable format. We took this data and were able to single out key actions such as blinking and
-        jaw clenching. Our goal was to be able to use these events to be able to perform hands free events. In the
-          demo, the user doubles blinks to perform a random calculation. We were also able to play/pause music and launch
-          apps.
-            </p>
-          </div>
-        </div>
-
-        <div class='myProjects'>
-          <h4> <a href="https://github.com/als26"> Kirsch Image Edge Detector   <span class="git-link fa fa-github"
-            title="Github Link"></span></a></h4>
-          <div class="text-wrapper">
-            <img src="images/edgeDetection.png" class="imageDisplay">
-            <p class="text">Using Kirsch's algorithm, we implemented an edge detection program for black & white images.
-              The algorithm uses a 3*3 matrix of pixels. The pixel currently being examined will be in the centre of the
-                matrix, while each pixel beside it (top, bottom, left, right and corners) will fill the rest of the matrix.
-                From there a calculation will be made between the pixel in focus and it's neighbours to see how radically
-                different the brightness values are (blacks are less bright, whites are more bright). If the difference meets
-                a certain threshhold, an edge is detected and is marked. Edge Detection is used in the industry often times to
-                seperate the subject from the background, which can be further used for effects such as bokeh.
-            </p>
-          </div>
-        </div>
+        <!-- potential 2nd page -->
+        <!-- <div class='projectsPage'>
+          <div class='column'><img class="imageSlides" src="images/museIt.png"> <span class=projectTitles><h4>Muse-It: Hands Free Shortcuts</h4></span></div>
+        </div> -->
 
       </div>
 
-      <button class='nav-button display-left'><i class="fa fa-angle-left" aria-hidden="true"></i></button>
-      <button class='nav-button display-right'><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
 
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2 id="bigProjectTitle"></h2>
+          <img id="bigProjectImage" src="">
+          <img id="bigProjectImage2" src="">
+          <p id="bigProjectDesc"></p>
+        </div>
+      </div>
+
+      <!-- projects page turn buttons, only show up if >1 page -->
+      <button class='nav-button display-left display-hidden'><i class="fa fa-angle-left" aria-hidden="true"></i></button>
+      <button class='nav-button display-right display-hidden'><i class="fa fa-angle-right" aria-hidden="true"></i></button>
 
     </div>
 
