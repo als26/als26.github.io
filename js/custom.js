@@ -18,7 +18,7 @@ $( document ).ready(function() {
   });
 
   $('#contact').click(function() {
-    window.location.href = "mailto:a6sathiy@uwaterloo.ca?";
+    window.location.href = "mailto:a6sathiy@edu.uwaterloo.ca?";
   });
 
   $('.column').click(function() {
@@ -44,15 +44,18 @@ $( document ).ready(function() {
     });
 
     $('#myModal').fadeIn(200, "linear");
+    $('body').css("overflow-y", "hidden");
   });
 
   $('.close').click(function() {
     $('#myModal').fadeOut(200, "linear");
+    $('body').css("overflow-y", "auto");
   });
 
   $(window).click(function(e) {
     if (e.target.id == 'myModal') {
         $('#myModal').fadeOut(200);
+        $('body').css("overflow-y", "auto");
     }
   });
 

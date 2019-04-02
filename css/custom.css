@@ -213,7 +213,7 @@ button:focus { outline-style: none; }
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
-  overflow: hidden; /* Enable scroll if needed */
+  overflow: auto; /* Enable scroll if needed */
   /* background-color: rgb(0,0,0);
   background-color: rgba(0,0,0,0.7);  */
 }
@@ -224,7 +224,7 @@ button:focus { outline-style: none; }
   margin: 8% auto 15% auto; /* 15% from the top and centered */
   padding: 20px;
   width: 80%; /* Could be more or less, depending on screen size */
-  height: 80%;
+  height: auto;
 }
 
 .git-link {
@@ -255,21 +255,18 @@ button:focus { outline-style: none; }
 
 #bigProjectImage {
   width: 48%;
-  margin: 15px 0px;
-  float: left;
+  margin: 15px 10px 15px 10px;
 }
 
 #bigProjectImage2 {
   width: 48%;
   margin: 15px 0px;
-  float: right;
 }
 
 #bigProjectDesc {
   font-size: 1.3em;
   font-weight: 100;
   font-family: sans-serif;
-  float: right;
 }
 
 /* The Close Button */
@@ -441,7 +438,7 @@ and (orientation: portrait) {
 
   .modal-content {
     width: 90%;
-    height: 93%;
+    height: auto;
     margin: 5% auto 15% auto;
   }
 
