@@ -18,7 +18,7 @@ $( document ).ready(function() {
   });
 
   $('#contact').click(function() {
-    window.location.href = "mailto:a6sathiy@edu.uwaterloo.ca?";
+    window.location.href = "mailto:abilas96@gmail.com?";
   });
 
   $('.column').click(function() {
