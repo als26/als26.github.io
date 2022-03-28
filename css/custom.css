@@ -140,7 +140,7 @@ button:focus { outline-style: none; }
   font-size: 1.4em;
 }
 
-.hidden-git-link {
+.hidden-git-link, .hidden-website-link {
   display: none;
 }
 
@@ -207,33 +207,31 @@ button:focus { outline-style: none; }
 }
 
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  display: none;
+  position: fixed;
+  z-index: 1;
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  /* background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0,0.7);  */
+  width: 100%;
+  height: 200%;
+  overflow: auto; 
 }
 
 /* Modal Content/Box */
 .modal-content {
   background-color: #34495E;
-  margin: 8% auto 15% auto; /* 15% from the top and centered */
+  margin: 8% auto 15% auto; 
   padding: 20px;
-  width: 80%; /* Could be more or less, depending on screen size */
+  width: 65%;
   height: auto;
 }
 
-.git-link {
+.git-link, .website-link {
   display: none;
   text-shadow: white 0px 0px 1px;
 }
 
-.git-link:hover {
+.git-link:hover, .website-link:hover {
     cursor:pointer;
     text-shadow: white 0px 0px 2px;
 }
@@ -244,11 +242,11 @@ button:focus { outline-style: none; }
   margin-top: 0px;
 }
 
-#bigProjectTitle .git-link {
-  margin-top: 10px;
+#bigProjectTitle .git-link, #bigProjectTitle .website-link {
+  margin: 20px 10px 10px 10px;
 }
 
-#bigProjectTitle .git-link h4 {
+#bigProjectTitle .git-link h4, #bigProjectTitle .website-link h4 {
   font-family: 'Roboto', sans-serif;
   font-weight: 100;
   margin-bottom: 0px;
@@ -452,7 +450,7 @@ and (orientation: portrait) {
     margin: 5px 10px 0px 10px;
   }
 
-  #bigProjectTitle .git-link {
+  #bigProjectTitle .git-link,  #bigProjectTitle .website-link {
     font-size: 1.7em;
     margin-top: 25px;
   }

@@ -24,22 +24,25 @@ $( document ).ready(function() {
   $('.column').click(function() {
     var title = $(this).find('.project-titles').text();
     var imageSource = $(this).find('.image-slides').attr('src');
+    var imageSource2 = $(this).find('.image-slides2').length ? $(this).find('.image-slides2').attr('src') : "";
     var gitLink = $(this).find('.hidden-git-link').attr('data-link');
-    if ($(this).find('.image-slides2').length) {
-        var imageSource2 = $(this).find('.image-slides2').attr('src');
-    }
-    else {
-      $('#bigProjectImage2').attr("src","");
-    }
-    var desc = $(this).find('.project-description').text();
+    var websiteLink =  $(this).find('.hidden-website-link').length ? $(this).find('.hidden-website-link').attr('data-link') : '';
+
+    var desc = $(this).find('.project-description').html();
 
     $('#bigProjectTitle').text(title);
-    $('#bigProjectTitle').append('<br><span class="git-link fa fa-github" data-link="'+gitLink+'" title=" Github Link"><h4>Github</h4></span>')
+    $('#bigProjectTitle').append('<br><span class="git-link fa fa-github" data-link="'+gitLink+'" title="Github Link"><h4>Github</h4></span>')
+    if (websiteLink)
+      $('#bigProjectTitle').append('<span class="website-link fa fa-link" data-link="'+websiteLink+'" title="Website Link"><h4>Website</h4></span>')
     $('#bigProjectImage').attr("src",imageSource);
     $('#bigProjectImage2').attr("src",imageSource2);
-    $('#bigProjectDesc').text(desc);
+    $('#bigProjectDesc').html(desc);
 
     $('.git-link').on('click', function(){
+      window.open($(this).data('link'), '_blank');
+    });
+    
+    $('.website-link').on('click', function(){
       window.open($(this).data('link'), '_blank');
     });
 
