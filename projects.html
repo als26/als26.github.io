@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Abilas Sathiyanesan's Portfolio</title>
+    <meta name="Description" content="Abilas Sathiyanesan's in progress and completed side projects.">
 
     <!-- Bootstrap CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -20,22 +21,24 @@
     </script>
   </head>
 
-  <body id = "projects">
-    <a id="homeButton" class='link-button' href="./"><span class='fa fa-home'>
+  <body id="projects">
+    <a id="homeButton" class="link-button" href="./"><span class="fa fa-home">
     </span> Home</a>
 
-    <div id='title'>
+    <div id="title">
       <h1 class="projectsMobile">Projects</h1>
     </div>
 
-    <div id='slider-wrap'>
-      <div id='projectsWrap'>
+    <div id="slider-wrap">
+      <div id="projectsWrap">
 
-        <div class='projectsPage'>
+        <div class="projectsPage">
 
-          <div class='column'><img class="image-slides" src="images/youbash-room.png"> <img class="image-slides2" src="images/youbash-entry.png"> 
+          <div class="column">
+            <img class="image-slides" src="images/youbash-room.png"> 
+            <img class="image-slides2" src="images/youbash-entry.png"> 
             <span class=project-titles>
-              <h4>YouBash - YouTube Watch Party</h4> <span class="hidden-git-link" data-link="https://github.com/GeoYS/youbash"></span> <span class="hidden-website-link" data-link="http://www.youba.sh"></span>
+              <h4>YouBash - YouTube Watch Party</h4><span class="hidden-git-link" data-link="https://github.com/GeoYS/youbash"></span> <span class="hidden-website-link" data-link="http://www.youba.sh"></span>
             </span>
             <span class=project-description>
               Made with node.js and socket.io, YouBash is an online youtube watch party. You can get together with a group of friends and watch the same videos
@@ -44,8 +47,10 @@
             </span>
           </div>
 
-          <div class='column'><img class="image-slides" src="images/openVerified.png"> <img class="image-slides2" src="images/openUnverified.png"> <span class=project-titles>
-            <h4>Open! Facial Recognition</h4> <span class="hidden-git-link" data-link="https://github.com/als26/Open"></span></span>
+          <div class="column"><img class="image-slides" src="images/openVerified.png"> <img class="image-slides2" src="images/openUnverified.png"> 
+            <span class=project-titles>
+              <h4>Open! Facial Recognition</h4> <span class="hidden-git-link" data-link="https://github.com/als26/Open"></span>
+            </span>
             <span class=project-description>
               Open! is verfication system based on facial recognition. It uses OpenCV for image processing and the Kairos API for image recognition.
               A custom blur detection and reduction algorithm was also implemented to increase facial recognition. Unrecognized visitors would have their
@@ -53,8 +58,10 @@
             </span>
           </div>
 
-          <div class='column'><img class="image-slides" src="images/edgeDetection.png"> <span class=project-titles>
-            <h4>Kirsh Image Edge Detection Circuit</h4> <span class="hidden-git-link" data-link="https://github.com/als26/Kirsch-Image-Edge-Detector"></span></span>
+          <div class="column"><img class="image-slides" src="images/edgeDetection.png"> 
+            <span class=project-titles>
+              <h4>Kirsh Image Edge Detection Circuit</h4> <span class="hidden-git-link" data-link="https://github.com/als26/Kirsch-Image-Edge-Detector"></span>
+            </span>
             <span class=project-description>
               Using Kirsch's algorithm, we implemented an edge detection program for black & white images. The algorithm uses a 3*3 matrix of pixels.
               The pixel currently being examined will be in the centre of the matrix, while each pixel beside it (top, bottom, left, right and corners) will
@@ -64,8 +71,10 @@
             </span>
 
           </div>
-          <div class='column'><img class="image-slides" src="images/guideMeGlove.jpg"> <img class="image-slides2" src="images/guideMeGloveApp.png"> <span class=project-titles>
-            <h4>Guide-Me Glove</h4> <span class="hidden-git-link" data-link="https://github.com/rashmi237/GuideMe-Glove"></span> </span>
+          <div class="column"><img class="image-slides" src="images/guideMeGlove.jpg"> <img class="image-slides2" src="images/guideMeGloveApp.png"> 
+            <span class=project-titles>
+              <h4>Guide-Me Glove</h4> <span class="hidden-git-link" data-link="https://github.com/rashmi237/GuideMe-Glove"></span> 
+            </span>
             <span class=project-description>
               The Guide-Me Glove was built using an arduino, vibration motors and ultrasonic sensors to help guide the visually impaired around obstacles.
               The ultrasonic sensors read distances to nearby objects. The corresponding vibration motors provide haptic feedback to the user to warn them when an
@@ -73,8 +82,10 @@
             </span>
           </div>
 
-          <div class='column'><img class="image-slides" src="images/museIt.png"> <span class=project-titles>
-            <h4>Muse-It: Hands Free Shortcuts</h4> <span class="hidden-git-link" data-link="https://github.com/rashmi237/Muse-IT"></span></span>
+          <div class="column"><img class="image-slides" src="images/museIt.png"> 
+            <span class=project-titles>
+              <h4>Muse-It: Hands Free Shortcuts</h4> <span class="hidden-git-link" data-link="https://github.com/rashmi237/Muse-IT"></span>
+            </span>
             <span class=project-description>
               Muse-IT uses the Muse headband to be able to perform shortcuts on Windows OS. The muse headband is able to read brain signals using various sensors,
               and then output the data in a parsable format. We took this data and were able to single out key actions such as blinking and jaw clenching. We were able to
@@ -82,16 +93,11 @@
             </span>
           </div>
         </div>
-
-        <!-- potential 2nd page -->
-        <!-- <div class='projectsPage'>
-          <div class='column'><img class="imageSlides" src="images/museIt.png"> <span class=projectTitles><h4>Muse-It: Hands Free Shortcuts</h4></span></div>
-        </div> -->
-
+        
       </div>
 
       <!-- Hidden Project Information Modal -->
-      <div id="myModal" class="modal">
+      <div id="modal" class="modal">
 
         <div class="modal-content">
           <span class="close">&times;</span>
@@ -102,10 +108,6 @@
           
         </div>
       </div>
-
-      <!-- projects page turn buttons, only show up if >1 page -->
-      <button class='nav-button display-left display-hidden'><i class="fa fa-angle-left" aria-hidden="true"></i></button>
-      <button class='nav-button display-right display-hidden'><i class="fa fa-angle-right" aria-hidden="true"></i></button>
 
     </div>
 

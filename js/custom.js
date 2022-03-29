@@ -1,10 +1,8 @@
 $( document ).ready(function() {
-  //$("#back-top-div").fadeIn("slow");
-  //var elementPosition = $('#nav').offset();
   var projectIndex = 1;
   showDivs(projectIndex);
 
-  //Clicking functionality for links
+  // clicking functionality for links
   $('#resume').click(function() {
     window.open('https://drive.google.com/open?id=1UFrtSEdfMP6Ha4_Vz7Q9A9p5uJpcf6JV', '_blank');
   });
@@ -21,6 +19,7 @@ $( document ).ready(function() {
     window.location.href = "mailto:abilas96@gmail.com?";
   });
 
+  // open project modal and hydrate fields with hidden information
   $('.column').click(function() {
     var title = $(this).find('.project-titles').text();
     var imageSource = $(this).find('.image-slides').attr('src');
@@ -46,49 +45,22 @@ $( document ).ready(function() {
       window.open($(this).data('link'), '_blank');
     });
 
-    $('#myModal').fadeIn(200, "linear");
+    $('#modal').fadeIn(200, "linear");
     $('body').css("overflow-y", "hidden");
   });
 
+
+  // close methods for the modal
   $('.close').click(function() {
-    $('#myModal').fadeOut(200, "linear");
+    $('#modal').fadeOut(200, "linear");
     $('body').css("overflow-y", "auto");
   });
 
   $(window).click(function(e) {
-    if (e.target.id == 'myModal') {
-        $('#myModal').fadeOut(200);
+    if (e.target.id == 'modal') {
+        $('#modal').fadeOut(200);
         $('body').css("overflow-y", "auto");
     }
   });
-
-  $('.display-left').on('click', function() {
-    showDivs(projectIndex -= 1);
-  });
-
-  $('.display-right').on('click', function() {
-    showDivs(projectIndex += 1);
-  });
-
-
-
-  function showDivs(n) {
-    var i;
-    var x = $('.projectsPage');
-    var chevrons = $('.display-hidden');
-    if (x.length > 1) {
-      chevrons[0].style.visibility="visible"
-      chevrons[1].style.visibility="visible"
-      if (n > x.length) {projectIndex = 1}
-      if (n < 1) {projectIndex = x.length}
-      for (i = 0; i < x.length; i++) {
-         x[i].style.display = "none";
-      }
-      x[projectIndex-1].style.display = "flex";
-    }
-
-    else {
-    }
-  }
-
+  
 });

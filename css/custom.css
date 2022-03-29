@@ -12,10 +12,7 @@ body {
   overflow-y: auto;
 }
 
-#projects {
-  overflow-y: scroll;
-}
-
+/*Main page*/
 /*Keep content aligned vetically/horizontally */
 #center-wrap {
   position: relative;
@@ -23,7 +20,6 @@ body {
   text-align: center;
 }
 
-/* profile picture */
 #profile {
   border-radius: 50%;
   width: 10.2em;
@@ -42,7 +38,7 @@ body {
   text-align: center;
   text-transform: uppercase;
   color: whitesmoke;
-  margin-bottom: 25px;
+  margin-bottom: 0.3em;;
 }
 
 #tagline h4{
@@ -53,7 +49,7 @@ body {
 #nav-icons {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 15px;
+  margin-top: 1em;
   overflow: auto;
   text-align: center;
   display: inline-block;
@@ -102,10 +98,15 @@ body {
   text-decoration: none;
 }
 
-button:focus { outline-style: none; }
-
+button:focus { 
+  outline-style: none; 
+}
 
 /*Projects page*/
+#projects {
+  overflow-y: scroll;
+}
+
 .image-slides {
   height: 100%;
   width: 500px;
@@ -137,7 +138,7 @@ button:focus { outline-style: none; }
 }
 
 .project-titles h4 {
-  font-size: 1.4em;
+  font-size: 1.75em;
 }
 
 .hidden-git-link, .hidden-website-link {
@@ -190,12 +191,9 @@ button:focus { outline-style: none; }
   height: 30%;
 }
 
-/* The Modal (background) */
-
 .modal::before {
   content: "";
   display: block;
-  background-color:blue;
   position: fixed;
   z-index: -1;
   left: 0;
@@ -203,7 +201,6 @@ button:focus { outline-style: none; }
   width: 100%;
   height: 100%;
   background: rgba(0,0,0,0.7);
-   -webkit-filter: blur(5px);
 }
 
 .modal {
@@ -213,11 +210,10 @@ button:focus { outline-style: none; }
   left: 0;
   top: 0;
   width: 100%;
-  height: 200%;
+  height: 100%;
   overflow: auto; 
 }
 
-/* Modal Content/Box */
 .modal-content {
   background-color: #34495E;
   margin: 8% auto 15% auto; 
@@ -268,11 +264,14 @@ button:focus { outline-style: none; }
   font-family: sans-serif;
 }
 
-/* The Close Button */
+#bigProjectDesc a {
+  color: orange;
+}
+
 .close {
   color: whitesmoke;
   float: right;
-  font-size: 28px;
+  font-size: 2.1em;
   font-weight: bold;
   opacity: 1;
 }
@@ -283,84 +282,6 @@ button:focus { outline-style: none; }
   text-decoration: none;
   cursor: pointer;
 }
-
-.text-wrapper {
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.text-wrapper .text {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  line-height: 30px;
-  bottom:186px;
-  left:0px;
-
-  font-size: 18px;
-  font-weight: 300;
-
-  color: rgba(0,0,0,0.0);
-  background-color:rgba(0,0,0,0.0);
-  box-shadow: 0 0 0 0;
-  border-radius: 2px;
-
-  transition: all 0.2s ease-in;
-}
-
-.text-wrapper .text a {
-  color: rgba(0,0,0,0.0);
-  transition: all 0.2s ease-in;
-}
-
-.text-wrapper:hover .text {
-  color: rgba(255,255,255,1);
-  background-color:rgba(0,0,0,0.8);
-  box-shadow: black 0 0 10px -1px;
-}
-
-.text-wrapper:hover .text a {
-  color: rgba(255,255,255,1);
-}
-
-.nav-button {
-  background: none;
-  border: none;
-  font-size: 5em;
-  opacity: 1;
-  color: white;
-}
-
-.imageDisplay {
-  width: 100%;
-}
-
-.display-hidden {
-  visibility: hidden;
-}
-
-.display-left {
-  position: absolute;
-  top: 30%;
-  left: -3%;
-  text-shadow: rgba(255, 255, 255, 0) 0 0 10px;
-  transition: all 0.2s;
-}
-
-.display-right {
-  position: absolute;
-  top: 30%;
-  right: -3%;
-  text-shadow: rgba(255, 255, 255, 0) 0 0 10px;
-  transition: all 0.2s;
-}
-
-.display-left:hover, .display-right:hover {
-  text-shadow: white 0 0 10px;
-}
-
 
 /*Mobile devices in portrait*/
 @media only screen
@@ -380,9 +301,15 @@ and (orientation: portrait) {
     width: 13.2em;
     height: 13.2em;
   }
+
   #title h1 {
     font-size: 8em;
-    margin-top: 40px;
+    margin-top: 0.5em;
+  }
+  
+  #title .projectsMobile {
+    font-size: 8em;
+    margin-top: 1.75em;
   }
 
   #tagline {
@@ -408,6 +335,7 @@ and (orientation: portrait) {
     font-weight: 300;
     margin-top: 25px;
   }
+
   .projectsMobile {
     margin-top: 18%;
   }
@@ -439,12 +367,13 @@ and (orientation: portrait) {
   .modal-content {
     width: 90%;
     height: auto;
-    margin: 5% auto 15% auto;
+    margin: 10% auto 15% auto;;
   }
 
   .close {
-    font-size: 3em;
+    font-size: 5em;
   }
+
   #bigProjectTitle {
     font-size: 3.7em;
     margin: 5px 10px 0px 10px;
@@ -452,16 +381,14 @@ and (orientation: portrait) {
 
   #bigProjectTitle .git-link,  #bigProjectTitle .website-link {
     font-size: 1.7em;
-    margin-top: 25px;
+    margin: 60px 35px 10px 35px;
   }
 
-  #bigProjectImage {
-    width: 90%;
-    margin: 10px auto;
-    float: none;
+  #bigProjectTitle .git-link h4,  #bigProjectTitle .website-link h4{
+    font-size: 30px;
   }
 
-  #bigProjectImage2 {
+  #bigProjectImage, #bigProjectImage2 {
     width: 90%;
     margin: 10px auto;
     float: none;
@@ -471,12 +398,6 @@ and (orientation: portrait) {
     font-size: 2.3em;
     margin: 40px 10px;
     line-height: 1.5;
-  }
-
-
-
-  .text-wrapper {
-    width: 100%;
   }
 }
 
@@ -513,18 +434,7 @@ and (orientation: portrait) {
     top: 5%;
   }
 
-  .text-wrapper {
-    width: 100%;
-  }
-
-  #corner {
-    font-size: 2.5em;
-  }
-
 }
-
-
-
 /*Large screens*/
 /*@media only screen
 and (min-device-width: 1700px) {
