@@ -1,6 +1,4 @@
 $( document ).ready(function() {
-  var projectIndex = 1;
-  showDivs(projectIndex);
 
   // clicking functionality for links
   $('#resume').click(function() {
