@@ -45,6 +45,7 @@ $( document ).ready(function() {
 
     $('#modal').fadeIn(200, "linear");
     $('body').css("overflow-y", "hidden");
+    $('.blur-wrapper').css("filter", "blur(30px");
   });
 
 
@@ -52,12 +53,14 @@ $( document ).ready(function() {
   $('.close').click(function() {
     $('#modal').fadeOut(200, "linear");
     $('body').css("overflow-y", "auto");
+    $('.blur-wrapper').css("filter", "");
   });
 
   $(window).click(function(e) {
     if (e.target.id == 'modal') {
         $('#modal').fadeOut(200);
         $('body').css("overflow-y", "auto");
+        $('.blur-wrapper').css("filter", "");
     }
   });
   
